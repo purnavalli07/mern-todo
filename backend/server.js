@@ -7,15 +7,19 @@ dotenv.config();
 connectDB();
 
 const app = express();
-
 app.use(cors());
 app.use(express.json());
 
+// Test route
 app.get("/", (req, res) => {
   res.send("API is running...");
 });
 
-const PORT = process.env.PORT || 5000;
+// Todo routes
+const todoRoutes = require(__dirname + "/routes/todoRoutes.js");
+app.use("/api/todos", todoRoutes);
+
+const PORT = 5050;
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
