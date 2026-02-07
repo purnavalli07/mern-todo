@@ -1,14 +1,27 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 function Navbar() {
+  const location = useLocation();
+
   return (
-    <nav style={{ padding: "10px", background: "#222" }}>
-      <Link to="/" style={{ color: "white", marginRight: "10px" }}>
-        Home
-      </Link>
-      <Link to="/add" style={{ color: "white" }}>
-        Add Todo
-      </Link>
+    <nav>
+      <div className="nav-content">
+        <div className="logo">TodoApp</div>
+        <div className="nav-links">
+          <Link 
+            to="/" 
+            className={location.pathname === "/" ? "active" : ""}
+          >
+            Home
+          </Link>
+          <Link 
+            to="/add" 
+            className={location.pathname === "/add" ? "active" : ""}
+          >
+            Add Task
+          </Link>
+        </div>
+      </div>
     </nav>
   );
 }
