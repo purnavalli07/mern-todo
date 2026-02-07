@@ -1,42 +1,90 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background: linear-gradient(135deg,#6a7bd5,#7c5fd1);
+}
+
+/* Navbar */
+
+.navbar {
+  background: white;
+  padding: 20px;
   text-align: center;
+  border-radius: 12px;
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  margin: 0;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-links a {
+  margin: 10px;
+  text-decoration: none;
+  color: #6a7bd5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* Container */
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
 }
 
-.card {
-  padding: 2em;
+.hero {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
 }
 
-.read-the-docs {
-  color: #888;
+/* Todo Card */
+
+.todo-card {
+  background: white;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.todo-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.badge {
+  margin-left: auto;
+  background: #f3d48b;
+  padding: 5px 10px;
+  border-radius: 20px;
+}
+
+.todo-card.done {
+  background: #e6f3ea;
+}
+
+/* Buttons */
+
+.btn-group {
+  margin-top: 10px;
+}
+
+.edit-btn {
+  background: #6a7bd5;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-right: 10px;
+}
+
+.delete-btn {
+  border: 1px solid red;
+  color: red;
+  background: white;
+  padding: 8px 12px;
 }

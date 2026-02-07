@@ -4,24 +4,28 @@ function Navbar() {
   const location = useLocation();
 
   return (
-    <nav>
-      <div className="nav-content">
-        <div className="logo">TodoApp</div>
-        <div className="nav-links">
-          <Link 
-            to="/" 
-            className={location.pathname === "/" ? "active" : ""}
-          >
-            Home
-          </Link>
-          <Link 
-            to="/add" 
-            className={location.pathname === "/add" ? "active" : ""}
-          >
-            Add Task
-          </Link>
-        </div>
+    <nav className="navbar">
+      
+      {/* Center Title */}
+      <h1 className="nav-title">TodoApp</h1>
+
+      {/* Navigation buttons */}
+      <div className="nav-links">
+        <Link
+          to="/"
+          className={location.pathname === "/" ? "active" : ""}
+        >
+          Home
+        </Link>
+
+        <Link
+          to="/add"
+          className={location.pathname === "/add" ? "active" : ""}
+        >
+          + Add Task
+        </Link>
       </div>
+
     </nav>
   );
 }

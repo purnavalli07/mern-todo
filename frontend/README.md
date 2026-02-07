@@ -1,16 +1,104 @@
-# React + Vite
+# 🚀 MERN Todo App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack Todo application built using the MERN stack.  
+Users can create, view, update, and delete tasks with persistent MongoDB storage.
 
-Currently, two official plugins are available:
+# Features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✅ Create tasks  
+✅ View tasks  
+✅ Update tasks  
+✅ Delete tasks  
+✅ Mark tasks as completed  
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+### Frontend
+- React (Vite)
+- React Router
+- Axios
+- CSS
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Backend
+- Node.js
+- Express.js
+- MongoDB Atlas
+- Mongoose
+
+---
+
+## 📁 Project Structure
+
+mern-todo-app/
+│
+├── backend/
+│ ├── config/
+│ ├── controllers/
+│ ├── models/
+│ ├── routes/
+│ ├── server.js
+│ └── package.json
+│
+├── frontend/
+│ ├── src/
+│ │ ├── components/
+│ │ ├── pages/
+│ │ ├── api.js
+│ │ └── App.jsx
+│ └── package.json
+│
+└── README.md
+---
+
+## ⚙️ Installation
+
+Clone repository:
+
+git clone https://github.com/purnavalli07/mern-todo.git
+cd mern-todo
+
+---
+
+## ▶️ Run Backend
+cd backend
+npm install
+node server.js
+
+Backend runs on: http://localhost:5050/
+
+---
+## 🌐 Environment Variables
+
+Create `.env` inside backend:
+
+PORT=5050
+MONGO_URI=your_mongodb_connection_string
+
+
+## ▶️ Run Frontend
+
+Open new terminal:
+cd frontend
+npm install
+npm run dev
+
+Frontend runs on:
+http://localhost:5173/
+
+
+---
+
+## 🔗 API Routes
+
+| Method | Endpoint | Description |
+|------|---------|------------|
+| GET | /api/todos | Get all todos |
+| POST | /api/todos | Create todo |
+| PUT | /api/todos/:id | Update todo |
+| DELETE | /api/todos/:id | Delete todo |
+
+---
+
+
